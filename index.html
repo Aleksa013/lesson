@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>var a = 1, b = 1, c, d;
+        c = ++a; alert(c); // 2
+        d = b++; alert(d); // 1
+        c = (2+ ++a); alert(c); // 5
+        d = (2+ b++); alert(d); // 4
+        alert(a); // 3
+        alert(b); // 3
+    </h4>
+    <p>Ответ:
+        с - префиксный инкремент,а d - постфиксный.
+        У c сначала происходит увеличение операнда,
+        а потом вывод ответа. У d ,наоборот,
+        сначала вывод ответа, а потом увеличение.
+    </p>
+    <h4>Чему будет равен x в примере ниже?
+        var a = 2;
+        var x = 1 + (a *= 2);
+    </h4>
+    <p> x = 5</p>
+    <script src="./script.js"></script>
+</body>
+
+</html>
