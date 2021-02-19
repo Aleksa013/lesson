@@ -1,48 +1,54 @@
 'use strict'
 //задание №1
-let num = '592';
-function numToObj( num ){
-    const arrNumber = num.split('');
-    while (arrNumber.length < 3){
-        arrNumber.unshift( 0 );
-    }
-    const numbers = {};
-    if (arrNumber.length > 3){
-        console.log("Недопустимое число. Число должно быть меньше 1000");
-    }
-    else{
-        numbers['сотни'] = +arrNumber[ 0 ];
-        numbers['десятки'] = +arrNumber[ 1 ];
-        numbers['единицы'] = +arrNumber[ 2 ];
-        console.log( numbers );
-    }
-}
+let chess = document.querySelector('.chessBoard');
 
-numToObj( num );
+let i = 0;
+let quantity = 0;
+while( quantity < 64 ){
+    let checker = document.createElement('div');
+    chess.appendChild(checker);
+
+    checker.classList.add('checkerBoard');
+    if( i && i % 2){
+    checker.classList.add('checkerBoard_black')
+    }
+    i+= ((i+2) % 9) ? 1 : 2;
+    quantity++;
+
+};
 
 //задание №2
-let bascet = [
-    {kind : 'pants' ,
-    price : 500
-},
-{
-    kind : 'dress'  ,
-    price : 750
-},
-{
-    kind : 'coat' ,
-    price : 1700
-}
+let basket = document.querySelector('.basket');
+
+let chip_basket = [
+    {
+        kind : 'pants' ,
+        price : 500
+    },
+    {
+        kind : 'dress'  ,
+        price : 750
+    },
+    {
+        kind : 'coat' ,
+        price : 1700
+    }
 ];
 
 function countBasKetPrice(){
     let equally =0;
-    for( let i = 0; i < bascet.length; i++){
-        equally += bascet[i].price;
+    if( chip_basket.length !== 0){
+    for( let a = 0; a < chip_basket.length; a++){
+        equally += chip_basket[a].price;
     }
-    console.log(equally);
+   basket.insertAdjacentText('beforeend','В корзине: '+ chip_basket.length +' товаров на сумму '+ equally +' рублей');
+}else{
+    basket.insertAdjacentText('beforeend','Корзина пуста!');
+}
 };
 countBasKetPrice();
+
+
 
 
 
