@@ -1,0 +1,15 @@
+.product {
+    width: 230px;
+    margin: 0 auto;
+}
+
+.basket {
+    width: 1030px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+    border: 3px solid blue;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
